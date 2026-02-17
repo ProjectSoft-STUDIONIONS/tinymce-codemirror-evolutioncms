@@ -4,6 +4,7 @@ html,body {
 
 body {
 	margin: 0;
+	max-width: calc(100% - 3px);
 }
 
 .CodeMirror {

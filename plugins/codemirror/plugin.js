@@ -66,13 +66,12 @@ tinymce.PluginManager.add('codemirror', function(editor, url) {
 			url: url + '/source.html',
 			width: codemirrorWidth,
 			height: codemirrorHeight,
-			resizable: true,
-			maximizable: true,
+			resizable: false,
+			maximizable: false,
 			fullScreen: editor.settings.codemirror.fullscreen,
 			saveCursorPosition: false,
 			buttons: buttonsConfig,
-			size: 'normal',
-			padding: 10,
+			size: 'normal'
 		};
 
 		if (tinymce.majorVersion >= 5) {

@@ -11,7 +11,36 @@ module.exports = function(grunt) {
 		pkg : {},
 		clean: {
 			zip: ['*.zip'],
-			temp: ['temp'],
+		},
+		copy: {
+			main: {
+				files: [
+					{
+						expand: true,
+						cwd: 'codemirror/addon',
+						src: ['**'],
+						dest: 'plugins/codemirror/codemirror/addon/',
+					},
+					{
+						expand: true,
+						cwd: 'codemirror/lib',
+						src: ['**'],
+						dest: 'plugins/codemirror/codemirror/lib/',
+					},
+					{
+						expand: true,
+						cwd: 'codemirror/mode',
+						src: ['**'],
+						dest: 'plugins/codemirror/codemirror/mode/',
+					},
+					{
+						expand: true,
+						cwd: 'codemirror/theme',
+						src: ['**'],
+						dest: 'plugins/codemirror/codemirror/theme/',
+					},
+				],
+			},
 		},
 		requirejs: {
 			main: {
@@ -150,6 +179,7 @@ module.exports = function(grunt) {
 	});
 	grunt.registerTask('default',	[
 		"clean",
+		"copy",
 		"requirejs",
 		"uglify",
 		"cssmin",

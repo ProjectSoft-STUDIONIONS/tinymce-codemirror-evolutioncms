@@ -11,3 +11,8 @@ test
 /plugins/codemirror/*
 !/plugins/codemirror/langs
 !/plugins/codemirror/*.*
+!/plugins/codemirror/codemirror
+/plugins/codemirror/codemirror/*
+!/plugins/codemirror/codemirror/theme
+/plugins/codemirror/codemirror/theme/*
+!/plugins/codemirror/codemirror/theme/mariana.css
