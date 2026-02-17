@@ -1,6 +1,6 @@
 {
 	"name": "tinymce-codemirror-evolutioncms",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Codemirror плагин для TinyMCE >= 4.x под Evolution CMS",
 	"type": "commonjs",
 	"main": "Gruntfile.js",
