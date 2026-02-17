@@ -15,20 +15,42 @@ tinymce.PluginManager.add('codemirror', function(editor, url) {
 	function showSourceEditor() {
 		editor.focus();
 		editor.selection.collapse(true);
+		let codeSettings = editor.settings.codemirror ? Object.assign({}, editor.settings.codemirror) : {};
+		codeSettings.indentOnInit = true;
+		codeSettings.fullscreen = codeSettings.fullscreen ? true : false;
+		codeSettings.path = "codemirror";
+		codeSettings.config = codeSettings.config ? Object.assign(codeSettings.config, {
+			mode: "application/x-httpd-php",
+			lineNumbers: true,
+			indentUnit: 4,
+			tabSize: 4,
+			theme: "mariana"
+		}) : {
+			mode: "application/x-httpd-php",
+			lineNumbers: true,
+			indentUnit: 4,
+			tabSize: 4,
+			theme: "mariana"
+		};
+		codeSettings.saveCursorPosition = codeSettings.saveCursorPosition ?  true : false;
+		codeSettings.jsFiles = codeSettings.jsFiles ? codeSettings.jsFiles : [
+			"mode/php/php.js",
+			"addon/edit/matchbrackets.js",
+			"mode/xml/xml.js",
+			"mode/javascript/javascript.js",
+			"mode/css/css.js",
+			"mode/htmlmixed/htmlmixed.js",
+			"addon/selection/active-line.js"
+		];
+		codeSettings.cssFiles = codeSettings.cssFiles ? codeSettings.cssFiles : [
+			"lib/codemirror.css",
+			"theme/mariana.css"
+		];
 
+		editor.settings.codemirror = Object.assign({}, codeSettings);
 		// Insert caret marker
 		if (editor.settings.codemirror.saveCursorPosition) {
 			editor.selection.setContent('<span style="display: none;" class="CmCaReT">&#x0;</span>');
-		}
-
-		var codemirrorWidth = 800;
-		if (editor.settings.codemirror.width) {
-			codemirrorWidth = editor.settings.codemirror.width;
-		}
-
-		var codemirrorHeight = 550;
-		if (editor.settings.codemirror.height) {
-			codemirrorHeight = editor.settings.codemirror.height;
 		}
 
 		var buttonsConfig = (tinymce.majorVersion < 5)
@@ -60,16 +82,15 @@ tinymce.PluginManager.add('codemirror', function(editor, url) {
 					name: 'codemirrorCancel',
 				},
 			];
-
 		var config = {
-			title: 'HTML source code',
+			title: 'The source HTML code of the CodeMirror plugin',
 			url: url + '/source.html',
-			width: codemirrorWidth,
-			height: codemirrorHeight,
+			width: window.innerWidth - 100,
+			height: window.innerHeight - 200,
 			resizable: true,
 			maximizable: true,
 			fullScreen: editor.settings.codemirror.fullscreen,
-			saveCursorPosition: false,
+			saveCursorPosition: true,
 			buttons: buttonsConfig,
 			size: 'normal'
 		};
@@ -97,29 +118,29 @@ tinymce.PluginManager.add('codemirror', function(editor, url) {
 	if (tinymce.majorVersion < 5) {
 		// Add a button to the button bar
 		editor.addButton('codemirror', {
-			title: 'Source code Codemirror',
-			icon: 'code',
+			title: 'The source HTML code of the CodeMirror plugin',
+			icon: 'codesample',
 			onclick: showSourceEditor,
 		});
 
 		// Add a menu item to the tools menu
 		editor.addMenuItem('codemirror', {
-			icon: 'code',
-			text: 'Source code Codemirror',
+			icon: 'codesample',
+			text: 'The source HTML code of the CodeMirror plugin',
 			context: 'tools',
 			onclick: showSourceEditor,
 		});
 	} else {
 		editor.ui.registry.addButton('codemirror', {
 			icon: 'sourcecode',
-			title: 'Source code Codemirror',
-			tooltip: 'Source code Codemirror',
+			title: 'The source HTML code of the CodeMirror plugin',
+			tooltip: 'The source HTML code of the CodeMirror plugin',
 			onAction: showSourceEditor,
 		});
 
 		editor.ui.registry.addMenuItem('codemirror', {
 			icon: 'sourcecode',
-			text: 'Source code Codemirror',
+			text: 'The source HTML code of the CodeMirror plugin',
 			onAction: showSourceEditor,
 			context: 'tools',
 		});

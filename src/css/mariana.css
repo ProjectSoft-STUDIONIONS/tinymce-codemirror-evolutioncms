@@ -9,7 +9,7 @@
 }
 
 .cm-s-mariana div.CodeMirror-selected {
-	background: #2D2D2D;
+	background: #4C5863;
 }
 
 .cm-s-mariana .CodeMirror-line::selection,
@@ -17,8 +17,8 @@
 .cm-s-mariana .CodeMirror-line > span > span::selection,
 .cm-s-mariana .CodeMirror-line::-moz-selection,
 .cm-s-mariana .CodeMirror-line > span::-moz-selection,
-.cm-s-mariana .CodeMirror-line > span > span::-moz-selectio {
-	background: rgba(45, 45, 45, 0.99);
+.cm-s-mariana .CodeMirror-line > span > span::-moz-selection {
+	background: #4C5863;
 }
 
 .cm-s-mariana .CodeMirror-gutters {

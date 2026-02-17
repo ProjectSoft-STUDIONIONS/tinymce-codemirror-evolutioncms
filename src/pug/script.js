@@ -29,7 +29,7 @@ function inArray(key, arr)
 	editor = tinymce.activeEditor;
 	var i, userSettings = editor.settings.codemirror ? editor.settings.codemirror : {};
 	CMsettings = {
-		path: userSettings.path || 'codemirror-4.8',
+		path: userSettings.path || 'codemirror',
 		indentOnInit: userSettings.indentOnInit || false,
 		disableFilesMerge: userSettings.disableFilesMerge || false,
 		config: {// Default config
@@ -53,7 +53,7 @@ function inArray(key, arr)
 			'mode/htmlmixed/htmlmixed.js',
 			'addon/dialog/dialog.js',
 			'addon/search/searchcursor.js',
-			'addon/search/search.js',
+			//'addon/search/search.js',
 			'addon/selection/active-line.js'
 		],
 		cssFiles: [// Default CSS files

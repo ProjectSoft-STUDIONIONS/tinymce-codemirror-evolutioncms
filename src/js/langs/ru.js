@@ -1,9 +1,11 @@
-tinymce.addI18n('ru',{
-	'HTML source code': 'Исходный HTML код',
-	'Start search': 'Начать поиск',
-	'Find next': 'Найти следующий',
-	'Find previous': 'Найти предыдущий',
-	'Replace': 'Заменить',
-	'Replace all': 'Заменить все',
-	'Source code Codemirror': 'Исходный код Codemirror'
-});
+tinymce.addI18n(
+	'ru',
+	{
+		'The source HTML code of the CodeMirror plugin': 'Исходный HTML код плагином CodeMirror',
+		'Start search': 'Начать поиск',
+		'Find next': 'Найти следующий',
+		'Find previous': 'Найти предыдущий',
+		'Replace': 'Заменить',
+		'Replace all': 'Заменить все',
+	}
+);

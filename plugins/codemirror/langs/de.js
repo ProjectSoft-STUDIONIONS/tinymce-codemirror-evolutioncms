@@ -1,1 +1,1 @@
-tinymce.addI18n("de",{"HTML source code":"HTML-Quellcode","Start search":"Suchen","Find next":"Suche n\xe4chstes","Find previous":"Suche vorheriges",Replace:"Ersetzen","Replace all":"Alles ersetzen","Source code Codemirror":"\u0418\u0441\u0445\u043e\u0434\u043d\u044b\u0439 \u043a\u043e\u0434 Codemirror"});
+tinymce.addI18n("de",{"The source HTML code of the CodeMirror plugin":"The source HTML code of the CodeMirror plugin","Start search":"Suchen","Find next":"Suche n\xe4chstes","Find previous":"Suche vorheriges",Replace:"Ersetzen","Replace all":"Alles ersetzen"});

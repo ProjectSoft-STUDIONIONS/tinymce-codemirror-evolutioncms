@@ -1,9 +1,11 @@
-tinymce.addI18n('nl',{
-	'HTML source code': 'HTML broncode',
-	'Start search': 'Start zoeken',
-	'Find next': 'Zoek volgende',
-	'Find previous': 'Zoek vorige',
-	'Replace': 'Vervang',
-	'Replace all': 'Vervang alle',
-	'Source code Codemirror': 'Исходный код Codemirror'
-});
+tinymce.addI18n(
+	'nl',
+	{
+		'The source HTML code of the CodeMirror plugin': 'The source HTML code of the CodeMirror plugin',
+		'Start search': 'Start zoeken',
+		'Find next': 'Zoek volgende',
+		'Find previous': 'Zoek vorige',
+		'Replace': 'Vervang',
+		'Replace all': 'Vervang alle',
+	}
+);
