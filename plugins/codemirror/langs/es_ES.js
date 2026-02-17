@@ -1,0 +1,1 @@
+tinymce.addI18n("es_ES",{"HTML source code":"C\xf3digo fuente HTML","Start search":"Buscar","Find next":"Siguiente","Find previous":"Anterior",Replace:"Reemplazar","Replace all":"Reemplazar todo","Source code Codemirror":"\u0418\u0441\u0445\u043e\u0434\u043d\u044b\u0439 \u043a\u043e\u0434 Codemirror"});

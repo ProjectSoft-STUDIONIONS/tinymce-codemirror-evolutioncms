@@ -1,0 +1,1 @@
+tinymce.addI18n("zh_TW",{"HTML source code":"HTML\u539f\u59cb\u78bc","Start search":"\u958b\u59cb\u641c\u5c0b","Find next":"\u641c\u5c0b\u4e0b\u4e00\u500b.","Find previous":"\u641c\u5c0b\u4e0a\u4e00\u500b.",Replace:"\u53d6\u4ee3","Replace all":"\u5168\u90e8\u53d6\u4ee3","Source code Codemirror":"\u0418\u0441\u0445\u043e\u0434\u043d\u044b\u0439 \u043a\u043e\u0434 Codemirror"});

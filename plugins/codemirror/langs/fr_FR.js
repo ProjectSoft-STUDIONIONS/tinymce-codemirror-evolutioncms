@@ -1,0 +1,1 @@
+tinymce.addI18n("fr_FR",{"HTML source code":"Code source HTML","Start search":"Rechercher","Find next":"Chercher suiv.","Find previous":"Chercher pr\xe9c.",Replace:"Replace","Replace all":"Replace all","Source code Codemirror":"\u0418\u0441\u0445\u043e\u0434\u043d\u044b\u0439 \u043a\u043e\u0434 Codemirror"});

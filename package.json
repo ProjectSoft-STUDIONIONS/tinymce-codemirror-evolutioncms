@@ -1,0 +1,36 @@
+{
+	"name": "tinymce-codemirror-evolutioncms",
+	"version": "1.0.0",
+	"description": "Codemirror плагин для TinyMCE >= 4.x под Evolution CMS",
+	"type": "commonjs",
+	"main": "Gruntfile.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"inst": "npm i",
+		"preinstall": "git clone https://github.com/codemirror/codemirror.git && cd codemirror && npm i && cd ../",
+		"prepare": "npm run-script build",
+		"build": "grunt -v"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ProjectSoft-STUDIONIONS/tinymce-codemirror-evolutioncms.git"
+	},
+	"author": "ProjectSoft <projectsoft2009@yandex.ru>",
+	"license": "GPL-3.0",
+	"bugs": {
+		"url": "https://github.com/ProjectSoft-STUDIONIONS/tinymce-codemirror-evolutioncms/issues"
+	},
+	"homepage": "https://github.com/ProjectSoft-STUDIONIONS/tinymce-codemirror-evolutioncms#readme",
+	"dependencies": {
+		"grunt": "^1.6.1",
+		"grunt-contrib-clean": "^2.0.1",
+		"grunt-contrib-compress": "^2.0.0",
+		"grunt-contrib-copy": "^1.0.0",
+		"grunt-contrib-cssmin": "4.0.0",
+		"grunt-contrib-pug": "3.0.0",
+		"grunt-contrib-requirejs": "^1.0.0",
+		"grunt-contrib-uglify-es": "^3.3.0",
+		"load-grunt-tasks": "^5.1.0",
+		"time-grunt": "github:ProjectSoft-STUDIONIONS/time-grunt"
+	}
+}

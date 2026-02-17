@@ -1,0 +1,1 @@
+tinymce.addI18n("cs_CZ",{"HTML source code":"Zdrojov\xfd HTML k\xf3d","Start search":"Hledat","Find next":"Naj\xedt dal\u0161\xed","Find previous":"Naj\xedt p\u0159edchoz\xed",Replace:"Nahradit","Replace all":"Nahradit v\u0161e","Source code Codemirror":"\u0418\u0441\u0445\u043e\u0434\u043d\u044b\u0439 \u043a\u043e\u0434 Codemirror"});

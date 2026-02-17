@@ -1,2 +1,3 @@
 # tinymce-codemirror-evolutioncms
-TinyMCE Плагин Codemirror под Evolution CMS
+
+Codemirror плагин для TinyMCE >= 4.x под Evolution CMS

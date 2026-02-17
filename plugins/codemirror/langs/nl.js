@@ -1,0 +1,1 @@
+tinymce.addI18n("nl",{"HTML source code":"HTML broncode","Start search":"Start zoeken","Find next":"Zoek volgende","Find previous":"Zoek vorige",Replace:"Vervang","Replace all":"Vervang alle","Source code Codemirror":"\u0418\u0441\u0445\u043e\u0434\u043d\u044b\u0439 \u043a\u043e\u0434 Codemirror"});

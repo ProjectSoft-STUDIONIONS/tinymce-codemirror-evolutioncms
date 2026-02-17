@@ -1,0 +1,13 @@
+*.sublime-wprkspace
+node_modules
+temp
+tmp
+test
+/codemirror
+*.zip
+*.ini
+*.inf
+*.ico
+/plugins/codemirror/*
+!/plugins/codemirror/langs
+!/plugins/codemirror/*.*
