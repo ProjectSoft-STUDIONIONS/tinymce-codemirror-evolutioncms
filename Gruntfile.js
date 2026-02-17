@@ -71,10 +71,10 @@ module.exports = function(grunt) {
 				sourceMap: false,
 				banner: ``,
 				compress: {
-					drop_console: false
+					drop_console: false,
 				},
 				output: {
-					ascii_only: true
+					ascii_only: true,
 				},
 			},
 			main: {
@@ -89,7 +89,7 @@ module.exports = function(grunt) {
 						filter: "isFile",
 						rename: function (dst, src) {
 							return dst + "/" + src.replace(".js", ".min.js");
-						}
+						},
 					},
 					{
 						expand: true,
@@ -98,7 +98,7 @@ module.exports = function(grunt) {
 							"src/js/langs/*"
 						],
 						dest: "plugins/codemirror/langs",
-						filter: "isFile"
+						filter: "isFile",
 					},
 					{
 						expand: true,
@@ -110,7 +110,7 @@ module.exports = function(grunt) {
 						filter: "isFile",
 						rename: function (dst, src) {
 							return dst + "/" + src.replace(".js", ".min.js");
-						}
+						},
 					},
 				],
 			},
@@ -118,12 +118,13 @@ module.exports = function(grunt) {
 		cssmin: {
 			options: {
 				mergeIntoShorthands: false,
-				roundingPrecision: -1
+				roundingPrecision: -1,
 			},
 			minify: {
 				files: {
 					'src/pug/style.min.css' : ['src/pug/style.css'],
-				}
+					'plugins/codemirror/codemirror/theme/mariana.css': ['src/css/mariana.css'],
+				},
 			},
 		},
 		pug: {
@@ -134,8 +135,8 @@ module.exports = function(grunt) {
 					pretty: '',
 					separator:  '',
 					data: function(dest, src) {
-						return {}
-					}
+						return {};
+					},
 				},
 				files: [
 					{
@@ -143,7 +144,7 @@ module.exports = function(grunt) {
 						cwd: __dirname + '/src/pug/',
 						src: [ '*.pug' ],
 						dest: 'plugins/codemirror/',
-						ext: '.html'
+						ext: '.html',
 					}
 				]
 			},
@@ -162,7 +163,7 @@ module.exports = function(grunt) {
 					},
 				],
 			},
-			evo4: {
+			tinymce4: {
 				options: {
 					archive: `codemirrorEvo.zip`,
 				},
@@ -174,7 +175,64 @@ module.exports = function(grunt) {
 						dest: `codemirrorEvo/assets/plugins/tinymce4/tinymce/`,
 					},
 				],
-			}
+			},
+			tinymce4dev: {
+				options: {
+					archive: `codemirrorEvoTinyMCE-4.zip`,
+				},
+				files: [
+					{
+						src: [
+							'plugins/**',
+						],
+						dest: `codemirrorEvoTinyMCE-4/assets/plugins/tinymce4/tinymce/`,
+					},
+				],
+			},
+			/**
+			 * Сделать под себя (мод нужную версию TinyMCE)
+			 */
+			/*
+			tinymce5: {
+				options: {
+					archive: `codemirrorEvoTinyMCE-5.zip`,
+				},
+				files: [
+					{
+						src: [
+							'plugins/**',
+						],
+						dest: `codemirrorEvoTinyMCE-5/assets/plugins/tinymce5/tinymce/`,
+					},
+				],
+			},
+			tinymce6: {
+				options: {
+					archive: `codemirrorEvoTinyMCE-6.zip`,
+				},
+				files: [
+					{
+						src: [
+							'plugins/**',
+						],
+						dest: `codemirrorEvoTinyMCE-6/assets/plugins/tinymce6/tinymce/`,
+					},
+				],
+			},
+			tinymce7: {
+				options: {
+					archive: `codemirrorEvoTinyMCE-7.zip`,
+				},
+				files: [
+					{
+						src: [
+							'plugins/**',
+						],
+						dest: `codemirrorEvoTinyMCE-7/assets/plugins/tinymce7/tinymce/`,
+					},
+				],
+			},
+			*/
 		},
 	});
 	grunt.registerTask('default',	[
