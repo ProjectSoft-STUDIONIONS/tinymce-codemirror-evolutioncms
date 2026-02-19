@@ -1,6 +1,8 @@
 .cm-s-mariana.CodeMirror {
 	background: #303841;
 	color: #D8DEE9;
+	font-size: 18px;
+	line-height: 1.4;
 }
 
 .cm-s-mariana.CodeMirror pre {

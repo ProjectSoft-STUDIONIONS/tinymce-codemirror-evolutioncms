@@ -1,23 +1,30 @@
-(function () {
 /**
+ *
+ * The source HTML code of the CodeMirror plugin
+ *
  * plugin.js
  *
  * Copyright 2013 Web Power, www.webpower.nl
  * @author Arjan Haverkamp
+ * @author ProjectSoft <projectsoft2009@yandex.ru>
+ *
  */
+
+!(function(tiny){
 
 /* jshint unused:false */
 /* global tinymce:true */
 
-tinymce.PluginManager.requireLangPack('codemirror');
+tiny.PluginManager.requireLangPack('codemirror');
 
-tinymce.PluginManager.add('codemirror', function(editor, url) {
+tiny.PluginManager.add('codemirror', function(editor, url) {
 	function showSourceEditor() {
 		editor.focus();
 		editor.selection.collapse(true);
 		let codeSettings = editor.settings.codemirror ? Object.assign({}, editor.settings.codemirror) : {};
 		codeSettings.indentOnInit = true;
 		codeSettings.fullscreen = codeSettings.fullscreen ? true : false;
+		codeSettings.iframe = codeSettings.iframe ? codeSettings.iframe : 'source.html';
 		codeSettings.path = "codemirror";
 		codeSettings.config = codeSettings.config ? Object.assign(codeSettings.config, {
 			mode: "application/x-httpd-php",
@@ -53,7 +60,7 @@ tinymce.PluginManager.add('codemirror', function(editor, url) {
 			editor.selection.setContent('<span style="display: none;" class="CmCaReT">&#x0;</span>');
 		}
 
-		var buttonsConfig = (tinymce.majorVersion < 5)
+		var buttonsConfig = (tiny.majorVersion < 5)
 			? [
 				{
 					text: 'Ok',
@@ -84,7 +91,7 @@ tinymce.PluginManager.add('codemirror', function(editor, url) {
 			];
 		var config = {
 			title: 'The source HTML code of the CodeMirror plugin',
-			url: url + '/source.html',
+			url: url + '/' + codeSettings.iframe,
 			width: window.innerWidth - 100,
 			height: window.innerHeight - 200,
 			resizable: true,
@@ -95,7 +102,7 @@ tinymce.PluginManager.add('codemirror', function(editor, url) {
 			size: 'normal'
 		};
 
-		if (tinymce.majorVersion >= 5) {
+		if (tiny.majorVersion >= 5) {
 			config.onAction = function (dialogApi, actionData) {
 				if (actionData.name === 'codemirrorOk') {
 					var doc = document.querySelectorAll('.tox-dialog__body-iframe iframe')[0];
@@ -106,7 +113,7 @@ tinymce.PluginManager.add('codemirror', function(editor, url) {
 			}
 		}
 
-		var win = (tinymce.majorVersion < 5)
+		var win = (tiny.majorVersion < 5)
 			? editor.windowManager.open(config)
 			: editor.windowManager.openUrl(config);
 
@@ -115,31 +122,35 @@ tinymce.PluginManager.add('codemirror', function(editor, url) {
 		}
 	}
 
-	if (tinymce.majorVersion < 5) {
+	if (tiny.majorVersion < 5) {
 		// Add a button to the button bar
 		editor.addButton('codemirror', {
 			title: 'The source HTML code of the CodeMirror plugin',
-			icon: 'codesample',
+			image: tinymce.baseURL + '/plugins/codemirror/codemirror.svg',
+			//icon: 'codesample',
 			onclick: showSourceEditor,
 		});
 
 		// Add a menu item to the tools menu
 		editor.addMenuItem('codemirror', {
-			icon: 'codesample',
+			//icon: 'codesample',,
+			image: tinymce.baseURL + '/plugins/codemirror/codemirror.svg',
 			text: 'The source HTML code of the CodeMirror plugin',
 			context: 'tools',
 			onclick: showSourceEditor,
 		});
 	} else {
 		editor.ui.registry.addButton('codemirror', {
-			icon: 'sourcecode',
+			//icon: 'sourcecode',
+			image: tinymce.baseURL + '/plugins/codemirror/codemirror.svg',
 			title: 'The source HTML code of the CodeMirror plugin',
 			tooltip: 'The source HTML code of the CodeMirror plugin',
 			onAction: showSourceEditor,
 		});
 
 		editor.ui.registry.addMenuItem('codemirror', {
-			icon: 'sourcecode',
+			//icon: 'sourcecode',
+			image: tinymce.baseURL + '/plugins/codemirror/codemirror.svg',
 			text: 'The source HTML code of the CodeMirror plugin',
 			onAction: showSourceEditor,
 			context: 'tools',
@@ -147,4 +158,5 @@ tinymce.PluginManager.add('codemirror', function(editor, url) {
 	}
 });
 
-}());
+}(tinymce));
+

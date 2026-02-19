@@ -1,11 +1,3 @@
-
-/**
- * source.html
- *
- * Copyright 2013-2014 Web Power, www.webpower.nl
- * @author Arjan Haverkamp
- */
-
 // Global vars:
 var tinymce,     // Reference to TinyMCE
 	editor,      // Reference to TinyMCE editor
@@ -22,7 +14,8 @@ function inArray(key, arr)
 }
 
 (function()
-{// Initialise (before load)
+{
+	// Initialise (before load)
 	"use strict";
 
 	tinymce = parent.tinymce;

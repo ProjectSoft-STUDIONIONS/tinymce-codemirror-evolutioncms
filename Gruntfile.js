@@ -48,7 +48,7 @@ module.exports = function(grunt) {
 					baseUrl: "src/js/",
 					out: "plugins/codemirror/plugin.js",
 					paths: {},
-					wrap: true,
+					//wrap: true,
 					skipModuleInsertion: true,
 					optimize: "none",
 					include: [
@@ -67,17 +67,27 @@ module.exports = function(grunt) {
 			},
 		},
 		uglify: {
-			options: {
-				sourceMap: false,
-				banner: ``,
-				compress: {
-					drop_console: false,
-				},
-				output: {
-					ascii_only: true,
-				},
-			},
 			main: {
+				options: {
+					sourceMap: false,
+					banner: `/**
+ *
+ * The source HTML code of the CodeMirror plugin
+ *
+ * plugin.js
+ *
+ * Copyright 2013 Web Power, www.webpower.nl
+ * @author Arjan Haverkamp
+ * @author ProjectSoft <projectsoft2009@yandex.ru>
+ *
+ */`,
+					compress: {
+						drop_console: false,
+					},
+					output: {
+						ascii_only: true,
+					},
+				},
 				files: [
 					{
 						expand: true,
@@ -91,6 +101,20 @@ module.exports = function(grunt) {
 							return dst + "/" + src.replace(".js", ".min.js");
 						},
 					},
+				],
+			},
+			lang: {
+				options: {
+					sourceMap: false,
+					//banner: ``,
+					compress: {
+						drop_console: false,
+					},
+					output: {
+						ascii_only: true,
+					},
+				},
+				files: [
 					{
 						expand: true,
 						flatten : true,
@@ -113,7 +137,7 @@ module.exports = function(grunt) {
 						},
 					},
 				],
-			},
+			}
 		},
 		cssmin: {
 			options: {
@@ -148,6 +172,20 @@ module.exports = function(grunt) {
 					}
 				]
 			},
+			source: {
+				options: {
+					doctype: 'html',
+					client: false,
+					pretty: '',
+					separator:  '',
+					data: function(dest, src) {
+						return {};
+					},
+				},
+				files: {
+					"plugins/codemirror/source.php": ["src/pug/source.pug"]
+				}
+			}
 		},
 		compress: {
 			main: {
