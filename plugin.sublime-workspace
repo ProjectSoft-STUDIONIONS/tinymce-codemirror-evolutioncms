@@ -384,32 +384,24 @@
 	"buffers":
 	[
 		{
-			"file": "src/css/mariana.css",
+			"file": "src/js/plugin.js",
 			"settings":
 			{
-				"buffer_size": 2012,
+				"buffer_size": 4417,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			},
 			"undo_stack":
 			[
 				[
-					3,
+					5,
 					1,
 					"insert",
 					{
-						"characters": "\n"
+						"characters": "html"
 					},
-					"AQAAAEEAAAAAAAAAQwAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAQQAAAAAAAABBAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					4,
-					1,
-					"paste",
-					null,
-					"AQAAAEMAAAAAAAAAZgAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAQwAAAAAAAABDAAAAAAAAAAAAAAAAAPC/"
+					"BAAAAPQCAAAAAAAA9QIAAAAAAAADAAAAcGhw9QIAAAAAAAD2AgAAAAAAAAAAAAD2AgAAAAAAAPcCAAAAAAAAAAAAAPcCAAAAAAAA+AIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA9AIAAAAAAAD3AgAAAAAAAAAAAAAAAPC/"
 				]
 			]
 		}
@@ -460,16 +452,21 @@
 	[
 		"/C/GIT/tinymce-codemirror-evolutioncms",
 		"/C/GIT/tinymce-codemirror-evolutioncms/src",
-		"/C/GIT/tinymce-codemirror-evolutioncms/src/css"
+		"/C/GIT/tinymce-codemirror-evolutioncms/src/js"
 	],
 	"file_history":
 	[
-		"/C/GIT/tinymce-codemirror-evolutioncms/src/pug/source.pug",
-		"/C/GIT/tinymce-codemirror-evolutioncms/src/pug/style.css",
-		"/C/GIT/tinymce-codemirror-evolutioncms/src/js/plugin.js",
 		"/C/GIT/tinymce-codemirror-evolutioncms/src/css/mariana.css",
-		"/C/GIT/tinymce-codemirror-evolutioncms/src/pug/script.js",
 		"/C/GIT/tinymce-codemirror-evolutioncms/Gruntfile.js",
+		"/C/GIT/tinymce-codemirror-evolutioncms/src/pug/source.pug",
+		"/C/GIT/tinymce-codemirror-evolutioncms/plugins/codemirror/source.php",
+		"/C/GIT/tinymce-codemirror-evolutioncms/src/pug/script.js",
+		"/C/GIT/tinymce-codemirror-evolutioncms/src/pug/script.min.js",
+		"/C/GIT/tinymce-codemirror-evolutioncms/src/js/plugin.js",
+		"/C/GIT/tinymce-codemirror-evolutioncms/plugins/codemirror/codemirror.svg",
+		"/C/GIT/tinymce-codemirror-evolutioncms/plugins/codemirror/plugin.min.js",
+		"/C/GIT/tinymce-codemirror-evolutioncms/plugins/codemirror/plugin.js",
+		"/C/GIT/tinymce-codemirror-evolutioncms/src/pug/style.css",
 		"/C/GIT/tinymce-codemirror-evolutioncms/package.json",
 		"/C/GIT/tinymce-codemirror-evolutioncms/plugin.sublime-project",
 		"/C/GIT/tinymce-codemirror-evolutioncms/.gitignore",
@@ -490,7 +487,6 @@
 		"/C/GIT/tinymce-codemirror-evolutioncms/codemirror/mode/dart/dart.js",
 		"/C/GIT/tinymce-codemirror-evolutioncms/plugins/codemirror/codemirror/theme/mariana.css",
 		"/C/GIT/tinymce-codemirror-evolutioncms/plugins/codemirror/source.html",
-		"/C/GIT/tinymce-codemirror-evolutioncms/src/pug/script.min.js",
 		"/C/GIT/tinymce-codemirror-evolutioncms/plugins/codemirror/langs/ru.js",
 		"/C/GIT/tinymce-codemirror-evolutioncms/.editorconfig",
 		"/C/GIT/tinymce-codemirror-evolutioncms/.npmrc",
@@ -587,15 +583,11 @@
 		"/C/GIT/NotoColorEmoji/assets/plugins/tinymce4/tinymce/plugins/notocoloremoji/plugin.js",
 		"/C/GIT/NotoColorEmoji/assets/plugins/tinymce4/tinymce/plugins/notocoloremoji/smiles.json",
 		"/C/GIT/NotoColorEmoji/assets/plugins/tinymce4/tinymce/plugins/notocoloremoji/plugin.css",
-		"/C/GIT/NotoColorEmoji/.github/workflows/grunt.yml",
-		"/C/GIT/NotoColorEmoji/.gitattributes",
-		"/C/GIT/NotoColorEmoji/.npmrc",
-		"/C/GIT/NotoColorEmoji/NotoColorEmoji.sublime-project",
-		"/C/GIT/NotoColorEmoji/bower.json"
+		"/C/GIT/NotoColorEmoji/.github/workflows/grunt.yml"
 	],
 	"find":
 	{
-		"height": 32.0
+		"height": 44.0
 	},
 	"find_in_files":
 	{
@@ -609,6 +601,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\\$\\$tiny",
 			"background",
 			"cm\\-s\\-projectsoft",
 			"\t\t\t"
@@ -619,6 +612,7 @@
 		"regex": true,
 		"replace_history":
 		[
+			"tiny",
 			"cm-s-mariana",
 			""
 		],
@@ -637,681 +631,33 @@
 			[
 				{
 					"buffer": 0,
-					"file": "src/css/mariana.css",
+					"file": "src/js/plugin.js",
 					"selected": true,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2012,
+						"buffer_size": 4417,
 						"regions":
 						{
-							"col_008803FF":
-							{
-								"flags": 16,
-								"regions":
-								[
-									[
-										978,
-										985
-									]
-								],
-								"scope": "col_008803FF"
-							},
-							"col_008803FF_icon":
-							{
-								"flags": 16,
-								"icon": "Packages/User/Color Highlight.cache/col_008803FF_fill.png",
-								"regions":
-								[
-									[
-										970,
-										970
-									]
-								],
-								"scope": "col_gutter"
-							},
-							"col_00FF00FF":
-							{
-								"flags": 16,
-								"regions":
-								[
-									[
-										733,
-										737
-									],
-									[
-										926,
-										933
-									]
-								],
-								"scope": "col_00FF00FF"
-							},
-							"col_00FF00FF_icon":
-							{
-								"flags": 16,
-								"icon": "Packages/User/Color Highlight.cache/col_00FF00FF_fill.png",
-								"regions":
-								[
-									[
-										725,
-										725
-									],
-									[
-										902,
-										902
-									]
-								],
-								"scope": "col_gutter"
-							},
-							"col_2F3740FF":
-							{
-								"flags": 16,
-								"regions":
-								[
-									[
-										40,
-										47
-									],
-									[
-										638,
-										645
-									]
-								],
-								"scope": "col_2F3740FF"
-							},
-							"col_2F3740FF_icon":
-							{
-								"flags": 16,
-								"icon": "Packages/User/Color Highlight.cache/col_2F3740FF_fill.png",
-								"regions":
-								[
-									[
-										27,
-										27
-									],
-									[
-										625,
-										625
-									]
-								],
-								"scope": "col_gutter"
-							},
-							"col_3300AAFF":
-							{
-								"flags": 16,
-								"regions":
-								[
-									[
-										1655,
-										1659
-									]
-								],
-								"scope": "col_3300AAFF"
-							},
-							"col_3300AAFF_icon":
-							{
-								"flags": 16,
-								"icon": "Packages/User/Color Highlight.cache/col_3300AAFF_fill.png",
-								"regions":
-								[
-									[
-										1647,
-										1647
-									]
-								],
-								"scope": "col_gutter"
-							},
-							"col_49515AFF":
-							{
-								"flags": 16,
-								"regions":
-								[
-									[
-										672,
-										679
-									]
-								],
-								"scope": "col_49515AFF"
-							},
-							"col_49515AFF_icon":
-							{
-								"flags": 16,
-								"icon": "Packages/User/Color Highlight.cache/col_49515AFF_fill.png",
-								"regions":
-								[
-									[
-										647,
-										647
-									]
-								],
-								"scope": "col_gutter"
-							},
-							"col_4C5863FF":
-							{
-								"flags": 16,
-								"regions":
-								[
-									[
-										236,
-										243
-									],
-									[
-										577,
-										584
-									],
-									[
-										1990,
-										1997
-									]
-								],
-								"scope": "col_4C5863FF"
-							},
-							"col_4C5863FF_icon":
-							{
-								"flags": 16,
-								"icon": "Packages/User/Color Highlight.cache/col_4C5863FF_fill.png",
-								"regions":
-								[
-									[
-										223,
-										223
-									],
-									[
-										564,
-										564
-									],
-									[
-										1977,
-										1977
-									]
-								],
-								"scope": "col_gutter"
-							},
-							"col_60B4A7FF":
-							{
-								"flags": 16,
-								"regions":
-								[
-									[
-										1704,
-										1711
-									],
-									[
-										1811,
-										1818
-									]
-								],
-								"scope": "col_60B4A7FF"
-							},
-							"col_60B4A7FF_icon":
-							{
-								"flags": 16,
-								"icon": "Packages/User/Color Highlight.cache/col_60B4A7FF_fill.png",
-								"regions":
-								[
-									[
-										1696,
-										1696
-									],
-									[
-										1803,
-										1803
-									]
-								],
-								"scope": "col_gutter"
-							},
-							"col_62FFA0FF":
-							{
-								"flags": 16,
-								"regions":
-								[
-									[
-										1350,
-										1357
-									]
-								],
-								"scope": "col_62FFA0FF"
-							},
-							"col_62FFA0FF_icon":
-							{
-								"flags": 16,
-								"icon": "Packages/User/Color Highlight.cache/col_62FFA0FF_fill.png",
-								"regions":
-								[
-									[
-										1342,
-										1342
-									]
-								],
-								"scope": "col_gutter"
-							},
-							"col_7FC794FF":
-							{
-								"flags": 16,
-								"regions":
-								[
-									[
-										1503,
-										1510
-									]
-								],
-								"scope": "col_7FC794FF"
-							},
-							"col_7FC794FF_icon":
-							{
-								"flags": 16,
-								"icon": "Packages/User/Color Highlight.cache/col_7FC794FF_fill.png",
-								"regions":
-								[
-									[
-										1495,
-										1495
-									]
-								],
-								"scope": "col_gutter"
-							},
-							"col_848B95FF":
-							{
-								"flags": 16,
-								"regions":
-								[
-									[
-										855,
-										862
-									]
-								],
-								"scope": "col_848B95FF"
-							},
-							"col_848B95FF_icon":
-							{
-								"flags": 16,
-								"icon": "Packages/User/Color Highlight.cache/col_848B95FF_fill.png",
-								"regions":
-								[
-									[
-										847,
-										847
-									]
-								],
-								"scope": "col_gutter"
-							},
-							"col_9966FFFF":
-							{
-								"flags": 16,
-								"regions":
-								[
-									[
-										1300,
-										1304
-									]
-								],
-								"scope": "col_9966FFFF"
-							},
-							"col_9966FFFF_icon":
-							{
-								"flags": 16,
-								"icon": "Packages/User/Color Highlight.cache/col_9966FFFF_fill.png",
-								"regions":
-								[
-									[
-										1292,
-										1292
-									]
-								],
-								"scope": "col_gutter"
-							},
-							"col_999999FF":
-							{
-								"flags": 16,
-								"regions":
-								[
-									[
-										1403,
-										1407
-									]
-								],
-								"scope": "col_999999FF"
-							},
-							"col_999999FF_icon":
-							{
-								"flags": 16,
-								"icon": "Packages/User/Color Highlight.cache/col_999999FF_fill.png",
-								"regions":
-								[
-									[
-										1395,
-										1395
-									]
-								],
-								"scope": "col_gutter"
-							},
-							"col_9999CCFF":
-							{
-								"flags": 16,
-								"regions":
-								[
-									[
-										1146,
-										1150
-									]
-								],
-								"scope": "col_9999CCFF"
-							},
-							"col_9999CCFF_icon":
-							{
-								"flags": 16,
-								"icon": "Packages/User/Color Highlight.cache/col_9999CCFF_fill.png",
-								"regions":
-								[
-									[
-										1138,
-										1138
-									]
-								],
-								"scope": "col_gutter"
-							},
-							"col_C695C6FF":
-							{
-								"flags": 16,
-								"regions":
-								[
-									[
-										1047,
-										1054
-									],
-									[
-										1865,
-										1872
-									]
-								],
-								"scope": "col_C695C6FF"
-							},
-							"col_C695C6FF_icon":
-							{
-								"flags": 16,
-								"icon": "Packages/User/Color Highlight.cache/col_C695C6FF_fill.png",
-								"regions":
-								[
-									[
-										1039,
-										1039
-									],
-									[
-										1857,
-										1857
-									]
-								],
-								"scope": "col_gutter"
-							},
-							"col_CC66FFFF":
-							{
-								"flags": 16,
-								"regions":
-								[
-									[
-										1248,
-										1252
-									]
-								],
-								"scope": "col_CC66FFFF"
-							},
-							"col_CC66FFFF_icon":
-							{
-								"flags": 16,
-								"icon": "Packages/User/Color Highlight.cache/col_CC66FFFF_fill.png",
-								"regions":
-								[
-									[
-										1240,
-										1240
-									]
-								],
-								"scope": "col_gutter"
-							},
-							"col_CC99FFFF":
-							{
-								"flags": 16,
-								"regions":
-								[
-									[
-										1552,
-										1556
-									]
-								],
-								"scope": "col_CC99FFFF"
-							},
-							"col_CC99FFFF_icon":
-							{
-								"flags": 16,
-								"icon": "Packages/User/Color Highlight.cache/col_CC99FFFF_fill.png",
-								"regions":
-								[
-									[
-										1544,
-										1544
-									]
-								],
-								"scope": "col_gutter"
-							},
-							"col_CCCCCCFF":
-							{
-								"flags": 16,
-								"regions":
-								[
-									[
-										1452,
-										1459
-									]
-								],
-								"scope": "col_CCCCCCFF"
-							},
-							"col_CCCCCCFF_icon":
-							{
-								"flags": 16,
-								"icon": "Packages/User/Color Highlight.cache/col_CCCCCCFF_fill.png",
-								"regions":
-								[
-									[
-										1444,
-										1444
-									]
-								],
-								"scope": "col_gutter"
-							},
-							"col_D8DEE9FF":
-							{
-								"flags": 16,
-								"regions":
-								[
-									[
-										57,
-										64
-									]
-								],
-								"scope": "col_D8DEE9FF"
-							},
-							"col_D8DEE9FF_icon":
-							{
-								"flags": 16,
-								"icon": "Packages/User/Color Highlight.cache/col_D8DEE9FF_fill.png",
-								"regions":
-								[
-									[
-										49,
-										49
-									]
-								],
-								"scope": "col_gutter"
-							},
-							"col_EC6066FF":
-							{
-								"flags": 16,
-								"regions":
-								[
-									[
-										1752,
-										1759
-									]
-								],
-								"scope": "col_EC6066FF"
-							},
-							"col_EC6066FF_icon":
-							{
-								"flags": 16,
-								"icon": "Packages/User/Color Highlight.cache/col_EC6066FF_fill.png",
-								"regions":
-								[
-									[
-										1744,
-										1744
-									]
-								],
-								"scope": "col_gutter"
-							},
-							"col_FF0000FF":
-							{
-								"flags": 16,
-								"regions":
-								[
-									[
-										1915,
-										1922
-									]
-								],
-								"scope": "col_FF0000FF"
-							},
-							"col_FF0000FF_icon":
-							{
-								"flags": 16,
-								"icon": "Packages/User/Color Highlight.cache/col_FF0000FF_fill.png",
-								"regions":
-								[
-									[
-										1907,
-										1907
-									]
-								],
-								"scope": "col_gutter"
-							},
-							"col_FF66CCFF":
-							{
-								"flags": 16,
-								"regions":
-								[
-									[
-										1196,
-										1200
-									]
-								],
-								"scope": "col_FF66CCFF"
-							},
-							"col_FF66CCFF_icon":
-							{
-								"flags": 16,
-								"icon": "Packages/User/Color Highlight.cache/col_FF66CCFF_fill.png",
-								"regions":
-								[
-									[
-										1188,
-										1188
-									]
-								],
-								"scope": "col_gutter"
-							},
-							"col_FFB94FFF":
-							{
-								"flags": 16,
-								"regions":
-								[
-									[
-										1098,
-										1105
-									]
-								],
-								"scope": "col_FFB94FFF"
-							},
-							"col_FFB94FFF_icon":
-							{
-								"flags": 16,
-								"icon": "Packages/User/Color Highlight.cache/col_FFB94FFF_fill.png",
-								"regions":
-								[
-									[
-										1090,
-										1090
-									]
-								],
-								"scope": "col_gutter"
-							},
-							"col_FFF700FF":
-							{
-								"flags": 16,
-								"regions":
-								[
-									[
-										1603,
-										1610
-									]
-								],
-								"scope": "col_FFF700FF"
-							},
-							"col_FFF700FF_icon":
-							{
-								"flags": 16,
-								"icon": "Packages/User/Color Highlight.cache/col_FFF700FF_fill.png",
-								"regions":
-								[
-									[
-										1595,
-										1595
-									]
-								],
-								"scope": "col_gutter"
-							},
-							"col_FFFFFFFF":
-							{
-								"flags": 16,
-								"regions":
-								[
-									[
-										798,
-										803
-									]
-								],
-								"scope": "col_FFFFFFFF"
-							},
-							"col_FFFFFFFF_icon":
-							{
-								"flags": 16,
-								"icon": "Packages/User/Color Highlight.cache/col_FFFFFFFF_fill.png",
-								"regions":
-								[
-									[
-										790,
-										790
-									]
-								],
-								"scope": "col_gutter"
-							}
 						},
 						"selection":
 						[
 							[
-								222,
-								222
+								760,
+								760
 							]
 						],
 						"settings":
 						{
 							"editorconfig": true,
 							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": false,
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 300.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1370,7 +716,7 @@
 	"project": "plugin.sublime-project",
 	"replace":
 	{
-		"height": 60.0
+		"height": 80.0
 	},
 	"save_all_on_build": true,
 	"select_file":

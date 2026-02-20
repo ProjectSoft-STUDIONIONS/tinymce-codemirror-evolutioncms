@@ -131,6 +131,19 @@ function start()
 		alert('CodeMirror not found in "' + CMsettings.path + '", aborting...');
 		return;
 	}
+	let head;
+	let img = parent.document.createElement('img');
+	img.src = tinymce.baseURL + '/plugins/codemirror/codemirror.svg';
+	img.style = 'margin-right:10px;width:auto;height:20px;position:relative;';
+	if(tinymce.majorVersion < 5) {
+		if(head = parent.document.querySelector('.mce-title')) {
+			head.prepend(img);
+		}
+	}else {
+		if(head = parent.document.querySelector('.tox-dialog__title')) {
+			head.prepend(img);
+		}
+	}
 	// Set CodeMirror cursor and bookmark to same position as cursor was in TinyMCE:
 	var html = editor.getContent({source_view: true});
 

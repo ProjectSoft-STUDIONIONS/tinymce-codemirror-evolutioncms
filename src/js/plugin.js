@@ -116,7 +116,6 @@ tiny.PluginManager.add('codemirror', function(editor, url) {
 		var win = (tiny.majorVersion < 5)
 			? editor.windowManager.open(config)
 			: editor.windowManager.openUrl(config);
-
 		if (editor.settings.codemirror.fullscreen) {
 			win.fullscreen(true);
 		}
