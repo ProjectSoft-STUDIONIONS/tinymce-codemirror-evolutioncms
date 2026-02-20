@@ -91,7 +91,8 @@ tiny.PluginManager.add('codemirror', function(editor, url) {
 			];
 		var config = {
 			title: 'The source HTML code of the CodeMirror plugin',
-			url: url + '/' + codeSettings.iframe,
+			url: url + '/' + editor.settings.codemirror.iframe,
+			classes: 'codemirror-dialog',
 			width: window.innerWidth - 100,
 			height: window.innerHeight - 200,
 			resizable: true,

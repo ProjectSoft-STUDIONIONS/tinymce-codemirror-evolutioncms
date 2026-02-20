@@ -131,17 +131,26 @@ function start()
 		alert('CodeMirror not found in "' + CMsettings.path + '", aborting...');
 		return;
 	}
-	let head;
-	let img = parent.document.createElement('img');
+	let head,
+		title,
+		img = parent.document.createElement('img');
 	img.src = tinymce.baseURL + '/plugins/codemirror/codemirror.svg';
 	img.style = 'margin-right:10px;width:auto;height:20px;position:relative;';
 	if(tinymce.majorVersion < 5) {
-		if(head = parent.document.querySelector('.mce-title')) {
-			head.prepend(img);
+		if(title = parent.document.querySelector('.mce-title')) {
+			title.prepend(img);
+			if(!parent.document.querySelector('link#codemirror_plugin')) {
+				let link = parent.document.createElement('link');
+				link.id = "codemirror_plugin";
+				link.rel = "stylesheet";
+				link.type = "text/css";
+				link.href = tinymce.baseURL + '/plugins/codemirror/codemirror.css';
+				parent.document.head.append(link);
+			}
 		}
 	}else {
-		if(head = parent.document.querySelector('.tox-dialog__title')) {
-			head.prepend(img);
+		if(title = parent.document.querySelector('.tox-dialog__title')) {
+			title.prepend(img);
 		}
 	}
 	// Set CodeMirror cursor and bookmark to same position as cursor was in TinyMCE:

@@ -1,8 +1,31 @@
+/*!
+  Name:       mariana
+  Author:     ProjectSoft (https://github.com/ProjectSoft-STUDIONIONS)
+  Website:    https://github.com/ProjectSoft-STUDIONIONS
+*/
+@font-face {
+	font-family: 'JetBrains Mono';
+	font-style: italic;
+	font-display: swap;
+	src: url(fonts/JetBrainsMono-Italic.woff2) format('woff2'),
+		url(fonts/JetBrainsMono-Italic.woff) format('woff'),
+		url(fonts/JetBrainsMono-Italic.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'JetBrains Mono';
+	font-style: normal;
+	font-display: swap;
+	src: url(fonts/JetBrainsMono.woff2) format('woff2'),
+		url(fonts/JetBrainsMono.woff) format('woff'),
+		url(fonts/JetBrainsMono.ttf) format('truetype');
+}
 .cm-s-mariana.CodeMirror {
 	background: #303841;
 	color: #D8DEE9;
 	font-size: 18px;
 	line-height: 1.4;
+	font-family: "JetBrains Mono", "Noto Color Emoji", sans-serif;
+	font-weight: 200;
 }
 
 .cm-s-mariana.CodeMirror pre {

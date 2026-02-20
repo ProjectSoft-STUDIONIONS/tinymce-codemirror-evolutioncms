@@ -1,0 +1,26 @@
+@font-face {
+	font-family: 'JetBrains Mono';
+	font-style: italic;
+	font-display: swap;
+	src: url(codemirror/theme/fonts/JetBrainsMono-Italic.woff2) format('woff2'),
+		url(codemirror/theme/fonts/JetBrainsMono-Italic.woff) format('woff'),
+		url(codemirror/theme/fonts/JetBrainsMono-Italic.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'JetBrains Mono';
+	font-style: normal;
+	font-display: swap;
+	src: url(codemirror/theme/fonts/JetBrainsMono.woff2) format('woff2'),
+		url(codemirror/theme/fonts/JetBrainsMono.woff) format('woff'),
+		url(codemirror/theme/fonts/JetBrainsMono.ttf) format('truetype');
+}
+.mce-codemirror-dialog .mce-title{
+	font-family: 'JetBrains Mono', 'Noto Color Emoji', sans-serif !important;
+}
+.mce-codemirror-dialog .mce-foot {
+	width: 100% !important;
+}
+.mce-codemirror-dialog .mce-foot button,
+.mce-codemirror-dialog .mce-foot button .mce-txt {
+	font-family: 'JetBrains Mono', 'Noto Color Emoji', sans-serif !important;
+}

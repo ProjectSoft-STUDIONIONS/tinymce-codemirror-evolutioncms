@@ -16,3 +16,4 @@ test
 !/plugins/codemirror/codemirror/theme
 /plugins/codemirror/codemirror/theme/*
 !/plugins/codemirror/codemirror/theme/mariana.css
+!/plugins/codemirror/codemirror/theme/fonts

@@ -148,6 +148,7 @@ module.exports = function(grunt) {
 				files: {
 					'src/pug/style.min.css' : ['src/pug/style.css'],
 					'plugins/codemirror/codemirror/theme/mariana.css': ['src/css/mariana.css'],
+					'plugins/codemirror/codemirror.css': ['src/css/codemirror.css'],
 				},
 			},
 		},
@@ -159,6 +160,7 @@ module.exports = function(grunt) {
 					pretty: '',
 					separator:  '',
 					data: function(dest, src) {
+						console.log("==>", dest);
 						return {};
 					},
 				},
@@ -169,23 +171,16 @@ module.exports = function(grunt) {
 						src: [ '*.pug' ],
 						dest: 'plugins/codemirror/',
 						ext: '.html',
-					}
+					},
+					{
+						expand: true,
+						cwd: __dirname + '/src/pug/',
+						src: [ '*.pug' ],
+						dest: 'plugins/codemirror/',
+						ext: '.php',
+					},
 				]
 			},
-			source: {
-				options: {
-					doctype: 'html',
-					client: false,
-					pretty: '',
-					separator:  '',
-					data: function(dest, src) {
-						return {};
-					},
-				},
-				files: {
-					"plugins/codemirror/source.php": ["src/pug/source.pug"]
-				}
-			}
 		},
 		compress: {
 			main: {
@@ -203,19 +198,6 @@ module.exports = function(grunt) {
 			},
 			tinymce4: {
 				options: {
-					archive: `codemirrorEvo.zip`,
-				},
-				files: [
-					{
-						src: [
-							'plugins/**',
-						],
-						dest: `codemirrorEvo/assets/plugins/tinymce4/tinymce/`,
-					},
-				],
-			},
-			tinymce4dev: {
-				options: {
 					archive: `codemirrorEvoTinyMCE-4.zip`,
 				},
 				files: [
@@ -230,7 +212,6 @@ module.exports = function(grunt) {
 			/**
 			 * Сделать под себя (мод нужную версию TinyMCE)
 			 */
-			/*
 			tinymce5: {
 				options: {
 					archive: `codemirrorEvoTinyMCE-5.zip`,
@@ -270,7 +251,6 @@ module.exports = function(grunt) {
 					},
 				],
 			},
-			*/
 		},
 	});
 	grunt.registerTask('default',	[
