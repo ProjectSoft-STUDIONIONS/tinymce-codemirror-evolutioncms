@@ -78,7 +78,10 @@ module.exports = function(grunt) {
  *
  * Copyright 2013 Web Power, www.webpower.nl
  * @author Arjan Haverkamp
- * @author ProjectSoft <projectsoft2009@yandex.ru>
+ *
+ * Copyright © 2008 - All right reserved
+ * @update ProjectSoft <projectsoft2009@yandex.ru>
+ * @date 14.02.2026
  *
  */`,
 					compress: {
@@ -87,6 +90,17 @@ module.exports = function(grunt) {
 					output: {
 						ascii_only: true,
 					},
+					mangle: {
+						reserved: [
+							'window',
+							'document',
+							'tinymce',
+							'doc',
+							'tiny',
+							'editor',
+							'url'
+						]
+					}
 				},
 				files: [
 					{
