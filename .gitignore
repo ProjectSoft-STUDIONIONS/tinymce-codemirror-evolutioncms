@@ -1,4 +1,4 @@
-*.sublime-wprkspace
+*.sublime-workspace
 node_modules
 temp
 tmp
