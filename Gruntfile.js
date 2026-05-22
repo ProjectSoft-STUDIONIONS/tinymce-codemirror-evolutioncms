@@ -153,6 +153,21 @@ module.exports = function(grunt) {
 				],
 			}
 		},
+		less: {
+			main: {
+				options : {
+					compress: false,
+					ieCompat: false,
+					plugins: [],
+					modifyVars: {},
+				},
+				files : {
+					'src/css/codemirror.css' : [
+						'src/css/codemirror.less'
+					],
+				}
+			}
+		},
 		cssmin: {
 			options: {
 				mergeIntoShorthands: false,
@@ -265,6 +280,19 @@ module.exports = function(grunt) {
 					},
 				],
 			},
+			tinymce8: {
+				options: {
+					archive: `codemirrorEvoTinyMCE-8.zip`,
+				},
+				files: [
+					{
+						src: [
+							'plugins/**',
+						],
+						dest: `codemirrorEvoTinyMCE-8/assets/plugins/tinymce8/tinymce/`,
+					},
+				],
+			},
 		},
 	});
 	grunt.registerTask('default',	[
@@ -272,6 +300,7 @@ module.exports = function(grunt) {
 		"copy",
 		"requirejs",
 		"uglify",
+		"less",
 		"cssmin",
 		"pug",
 		"compress",

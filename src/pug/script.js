@@ -4,7 +4,8 @@ var tinymce,     // Reference to TinyMCE
 	codemirror,  // CodeMirror instance
 	chr = 0,     // Unused utf-8 character, placeholder for cursor
 	isMac = /macintosh|mac os/i.test(navigator.userAgent),
-	CMsettings;  // CodeMirror settings
+	CMsettings,  // CodeMirror settings,
+	userSettings;
 
 function inArray(key, arr)
 {
@@ -20,7 +21,16 @@ function inArray(key, arr)
 
 	tinymce = parent.tinymce;
 	editor = tinymce.activeEditor;
-	var i, userSettings = editor.settings.codemirror ? editor.settings.codemirror : {};
+	var i;
+	if (tinymce.majorVersion < 5) {
+		userSettings =  editor.settings.codemirror ? Object.assign({}, editor.settings.codemirror) : {};
+	} else {
+		editor.options.register('codemirror', {
+			processor: 'object',
+			default: {}
+		});
+		userSettings =  editor.options.get('codemirror');
+	}
 	CMsettings = {
 		path: userSettings.path || 'codemirror',
 		indentOnInit: userSettings.indentOnInit || false,
@@ -148,11 +158,27 @@ function start()
 				parent.document.head.append(link);
 			}
 		}
-	}else {
+	} else {
 		if(title = parent.document.querySelector('.tox-dialog__title')) {
 			title.prepend(img);
 		}
 	}
+	// Add information plugin
+	let footer,
+		div_info,
+		a_info;
+	if(tinymce.majorVersion < 5) {
+		if(footer = parent.document.querySelector('.mce-foot > .mce-container-body > .mce-abs-end')) {
+			div_info = parent.document.createElement('div');
+			div_info.classList.add('mce-codemirror-info');
+			a_info = parent.document.createElement('a');
+			a_info.href = "https://github.com/ProjectSoft-STUDIONIONS/tinymce-codemirror-evolutioncms";
+			a_info.target = "_blank";
+			a_info.innerHTML = `TinyMCE Codemirror plugin`;
+			div_info.append(a_info);
+			footer.after(div_info);
+		}
+	} else {}
 	// Set CodeMirror cursor and bookmark to same position as cursor was in TinyMCE:
 	var html = editor.getContent({source_view: true});
 
@@ -177,7 +203,7 @@ function start()
 		}
 
 		// Indent all code, if so requested:
-		if (editor.settings.codemirror.indentOnInit) {
+		if (userSettings.indentOnInit) {
 			var last = inst.lineCount();
 			inst.operation(function() {
 				for (var i = 0; i < last; ++i) {

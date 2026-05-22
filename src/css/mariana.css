@@ -232,12 +232,13 @@ div.cm-s-mariana.CodeMirror span.CodeMirror-matchingbracket {
 	color: #CCCCCC;
 }
 
-.cm-s-mariana span.cm-string {
+.cm-s-mariana span.cm-string,
+.cm-s-mariana span.cm-modxUrl {
 	color: #99C794;
 }
 
 .cm-s-mariana span.cm-meta {
-	color: #C9F;
+	color: #ff9a9a;
 }
 
 .cm-s-mariana span.cm-qualifier {
