@@ -31,6 +31,7 @@ function inArray(key, arr)
 		});
 		userSettings =  editor.options.get('codemirror');
 	}
+	userSettings.indentOnInit = userSettings.indentOnInit === false ? false : true;
 	CMsettings = {
 		path: userSettings.path || 'codemirror',
 		indentOnInit: userSettings.indentOnInit || false,
@@ -57,7 +58,7 @@ function inArray(key, arr)
 			'addon/dialog/dialog.js',
 			'addon/search/searchcursor.js',
 			//'addon/search/search.js',
-			'addon/selection/active-line.js'
+			'addon/selection/active-line.js',
 		],
 		cssFiles: [// Default CSS files
 			'lib/codemirror.css',
@@ -201,7 +202,6 @@ function start()
 			inst.setCursor(cursor.to());
 			cursor.replace('');
 		}
-
 		// Indent all code, if so requested:
 		if (userSettings.indentOnInit) {
 			var last = inst.lineCount();
