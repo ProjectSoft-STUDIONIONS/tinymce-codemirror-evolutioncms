@@ -1,6 +1,5 @@
 * text=auto
 
-/src export-ignore
 /LICENSE export-ignore
 /README.md export-ignore
 /*.sublime-* export-ignore
