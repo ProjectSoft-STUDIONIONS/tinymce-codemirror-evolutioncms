@@ -11,6 +11,7 @@ module.exports = function(grunt) {
 		pkg : {},
 		clean: {
 			zip: ['*.zip'],
+			plugins: ['plugins']
 		},
 		copy: {
 			main: {
@@ -39,6 +40,12 @@ module.exports = function(grunt) {
 						src: ['**'],
 						dest: 'plugins/codemirror/codemirror/theme/',
 					},
+					{
+						expand: true,
+						cwd: 'src',
+						src: ['*.svg'],
+						dest: 'plugins/codemirror/'
+					}
 				],
 			},
 		},
