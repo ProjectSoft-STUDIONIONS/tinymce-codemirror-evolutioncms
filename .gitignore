@@ -7,7 +7,6 @@ test
 /codemirror/.*
 /codemirror/*.*
 /codemirror/**/.*
-/plugins
 *.zip
 *.ini
 *.inf
