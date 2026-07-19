@@ -17,25 +17,25 @@ module.exports = function(grunt) {
 				files: [
 					{
 						expand: true,
-						cwd: 'codemirror/addon',
+						cwd: 'node_modules/codemirror/addon',
 						src: ['**'],
 						dest: 'plugins/codemirror/codemirror/addon/',
 					},
 					{
 						expand: true,
-						cwd: 'codemirror/lib',
+						cwd: 'node_modules/codemirror/lib',
 						src: ['**'],
 						dest: 'plugins/codemirror/codemirror/lib/',
 					},
 					{
 						expand: true,
-						cwd: 'codemirror/mode',
+						cwd: 'node_modules/codemirror/mode',
 						src: ['**'],
 						dest: 'plugins/codemirror/codemirror/mode/',
 					},
 					{
 						expand: true,
-						cwd: 'codemirror/theme',
+						cwd: 'node_modules/codemirror/theme',
 						src: ['**'],
 						dest: 'plugins/codemirror/codemirror/theme/',
 					},

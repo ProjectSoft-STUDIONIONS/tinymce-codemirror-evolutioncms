@@ -1,5 +1,6 @@
+
 tinymce.addI18n(
-	'zh_TW',
+	'zh-TW',
 	{
 		'The source HTML code of the CodeMirror plugin': 'The source HTML code\nof the CodeMirror plugin',
 		'Start search': '開始搜尋',

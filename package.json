@@ -1,6 +1,6 @@
 {
 	"name": "tinymce-codemirror-evolutioncms",
-	"version": "1.2.0",
+	"version": "1.3.0",
 	"description": "Codemirror плагин для TinyMCE >= 4.x под Evolution CMS",
 	"type": "commonjs",
 	"main": "Gruntfile.js",
@@ -9,7 +9,7 @@
 		"inst": "npm i",
 		"preinstall": "git clone https://github.com/codemirror/codemirror.git && cd codemirror && npm i && cd ../",
 		"prepare": "npm run-script build",
-		"build": "grunt -v"
+		"build": "grunt"
 	},
 	"repository": {
 		"type": "git",
@@ -21,7 +21,8 @@
 		"url": "https://github.com/ProjectSoft-STUDIONIONS/tinymce-codemirror-evolutioncms/issues"
 	},
 	"homepage": "https://github.com/ProjectSoft-STUDIONIONS/tinymce-codemirror-evolutioncms#readme",
-	"dependencies": {
+	"devDependencies": {
+		"codemirror": "^5.65.21",
 		"grunt": "^1.6.1",
 		"grunt-contrib-clean": "^2.0.1",
 		"grunt-contrib-compress": "^2.0.0",

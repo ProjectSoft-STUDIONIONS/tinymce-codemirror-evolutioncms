@@ -1,10 +1,11 @@
+
 tinymce.addI18n(
-	'fr_FR',
+	'da',
 	{
 		'The source HTML code of the CodeMirror plugin': 'The source HTML code\nof the CodeMirror plugin',
-		'Start search': 'Rechercher',
-		'Find next': 'Chercher suiv.',
-		'Find previous': 'Chercher préc.',
+		'Start search': 'Start search',
+		'Find next': 'Find next',
+		'Find previous': 'Find previous',
 		'Replace': 'Replace',
 		'Replace all': 'Replace all',
 	}

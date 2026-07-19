@@ -1,3 +1,4 @@
+
 tinymce.addI18n(
 	'ru',
 	{

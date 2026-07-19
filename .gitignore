@@ -12,6 +12,7 @@ test
 *.ini
 *.inf
 *.ico
+/langs.js
 !/plugins/codemirror/.*
 !/plugins/codemirror/*.*
 !/plugins/codemirror/**/.*

@@ -202,15 +202,12 @@ function start()
 			inst.setCursor(cursor.to());
 			cursor.replace('');
 		}
-		// Indent all code, if so requested:
-		if (userSettings.indentOnInit) {
-			var last = inst.lineCount();
-			inst.operation(function() {
-				for (var i = 0; i < last; ++i) {
-					inst.indentLine(i);
-				}
-			});
-		}
+		var last = inst.lineCount();
+		inst.operation(function() {
+			for (var i = 0; i < last; ++i) {
+				inst.indentLine(i);
+			}
+		});
 	});
 
 	CMsettings.config.value = html;
