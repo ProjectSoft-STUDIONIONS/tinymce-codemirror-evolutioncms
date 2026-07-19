@@ -7,13 +7,9 @@ test
 /codemirror/.*
 /codemirror/*.*
 /codemirror/**/.*
-/codemirror/**/*.*
+/plugins
 *.zip
 *.ini
 *.inf
 *.ico
 /langs.js
-!/plugins/codemirror/.*
-!/plugins/codemirror/*.*
-!/plugins/codemirror/**/.*
-!/plugins/codemirror/**/*.*
