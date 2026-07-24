@@ -141,7 +141,7 @@
 			//console.log(win);
 		}
 		// add button and menu items
-		if (tiny.majorVersion < 6) {
+		if (tiny.majorVersion < 5) {
 			// Add a button to the button bar
 			editor.addButton('codemirror', {
 				title: 'The source HTML code of the CodeMirror plugin',
