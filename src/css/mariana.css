@@ -16,9 +16,9 @@
 	font-family: 'JetBrains Mono';
 	font-style: normal;
 	font-display: swap;
-	src: url(fonts/JetBrainsMono.woff2) format('woff2'),
-		url(fonts/JetBrainsMono.woff) format('woff'),
-		url(fonts/JetBrainsMono.ttf) format('truetype');
+	src: url(fonts/JetBrainsMono-Regular.woff2) format('woff2'),
+		url(fonts/JetBrainsMono-Regular.woff) format('woff'),
+		url(fonts/JetBrainsMono-Regular.ttf) format('truetype');
 }
 /* noto-color-emoji.[0] */
 @font-face {
