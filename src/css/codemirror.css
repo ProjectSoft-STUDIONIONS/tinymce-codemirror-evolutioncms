@@ -8,7 +8,7 @@
   font-family: 'JetBrains Mono';
   font-style: normal;
   font-display: swap;
-  src: url(codemirror/theme/fonts/JetBrainsMono.woff2) format('woff2'), url(codemirror/theme/fonts/JetBrainsMono.woff) format('woff'), url(codemirror/theme/fonts/JetBrainsMono.ttf) format('truetype');
+  src: url(codemirror/theme/fonts/JetBrainsMono-Regular.woff2) format('woff2'), url(codemirror/theme/fonts/JetBrainsMono-Regular.woff) format('woff'), url(codemirror/theme/fonts/JetBrainsMono-Regular.ttf) format('truetype');
 }
 .mce-codemirror-dialog .mce-btn-codemirror-ok,
 .mce-codemirror-dialog .mce-btn-codemirror-cancel {

@@ -45,6 +45,12 @@ module.exports = function(grunt) {
 						cwd: 'src',
 						src: ['*.svg'],
 						dest: 'plugins/codemirror/'
+					},
+					{
+						expand: true,
+						cwd: 'src/fonts',
+						src: ['*.*'],
+						dest: 'plugins/codemirror/codemirror/theme/fonts'
 					}
 				],
 			},
