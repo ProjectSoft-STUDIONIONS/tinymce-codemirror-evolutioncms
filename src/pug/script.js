@@ -22,7 +22,7 @@ function inArray(key, arr)
 	tinymce = parent.tinymce;
 	editor = tinymce.activeEditor;
 	var i;
-	if (tinymce.majorVersion < 5) {
+	if (tinymce.majorVersion < 6) {
 		userSettings =  editor.settings.codemirror ? Object.assign({}, editor.settings.codemirror) : {};
 	} else {
 		editor.options.register('codemirror', {
