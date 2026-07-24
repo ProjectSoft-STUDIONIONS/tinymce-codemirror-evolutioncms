@@ -148,7 +148,6 @@
 				image: tiny.baseURL + '/plugins/codemirror/codemirror.svg',
 				onclick: showSourceEditor,
 			});
-
 			// Add a menu item to the tools menu
 			editor.addMenuItem('codemirror-tools', {
 				image: tiny.baseURL + '/plugins/codemirror/codemirror.svg',
@@ -172,18 +171,11 @@
 				onAction: showSourceEditor,
 			});
 			// Add a menu item to the tools menu
-			editor.ui.registry.addMenuItem('codemirror-tools', {
+			editor.ui.registry.addMenuItem('codemirror', {
 				icon: 'codemirror-icon',
 				text: 'The source HTML code of the CodeMirror plugin',
 				onAction: showSourceEditor,
 				context: 'tools',
-			});
-			// Add a menu item to the view menu
-			editor.ui.registry.addMenuItem('codemirror-view', {
-				icon: 'codemirror-icon',
-				text: 'The source HTML code of the CodeMirror plugin',
-				onAction: showSourceEditor,
-				context: 'view',
 			});
 		}
 	});

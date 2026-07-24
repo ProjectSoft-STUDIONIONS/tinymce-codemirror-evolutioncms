@@ -115,12 +115,12 @@ function inArray(key, arr)
 
 	// Write stylesheets
 	for (i = 0; i < CMsettings.cssFiles.length; i++) {
-		document.write('<li'+'nk rel="stylesheet" type="text/css" href="' + CMsettings.path + CMsettings.cssFiles[i] + '" />');
+		document.write('<link rel="stylesheet" type="text/css" href="' + CMsettings.path + CMsettings.cssFiles[i] + '" />');
 	}
 
 	// Write JS source files
 	for (i = 0; i < CMsettings.jsFiles.length; i++) {
-		document.write('<scr'+'ipt type="text/javascript" src="' + CMsettings.path + CMsettings.jsFiles[i] + '"></scr'+'ipt>');
+		document.write('<script type="text/javascript" src="' + CMsettings.path + CMsettings.jsFiles[i] + '"></script>');
 	}
 
 	// Borrowed from codemirror.js themeChanged function. Sets the theme's class names to the html element.
@@ -142,44 +142,39 @@ function start()
 		alert('CodeMirror not found in "' + CMsettings.path + '", aborting...');
 		return;
 	}
-	let head,
-		title,
-		img = parent.document.createElement('img');
-	img.src = tinymce.baseURL + '/plugins/codemirror/codemirror.svg';
-	img.style = 'margin-right:10px;width:auto;height:20px;position:relative;';
-	if(tinymce.majorVersion < 5) {
-		if(title = parent.document.querySelector('.mce-title')) {
-			title.prepend(img);
-			if(!parent.document.querySelector('link#codemirror_plugin')) {
-				let link = parent.document.createElement('link');
-				link.id = "codemirror_plugin";
-				link.rel = "stylesheet";
-				link.type = "text/css";
-				link.href = tinymce.baseURL + '/plugins/codemirror/codemirror.css';
-				parent.document.head.append(link);
-			}
-		}
-	} else {
-		if(title = parent.document.querySelector('.tox-dialog__title')) {
-			title.prepend(img);
-		}
+	// Загрузка CSS
+	if(!parent.document.querySelector('link#codemirror_plugin')) {
+		let link = parent.document.createElement('link');
+		link.id = "codemirror_plugin";
+		link.rel = "stylesheet";
+		link.type = "text/css";
+		link.href = tinymce.baseURL + '/plugins/codemirror/codemirror.css';
+		parent.document.head.append(link);
 	}
-	// Add information plugin
-	let footer,
+
+	let title = tinymce.majorVersion < 5 ? parent.document.querySelector('.mce-title') : parent.document.querySelector('.tox-dialog__title'),
+		img = parent.document.createElement('img'),
+		footer = tinymce.majorVersion < 5 ? parent.document.querySelector('.mce-foot > .mce-container-body > .mce-abs-end') : parent.document.querySelector('.tox-dialog__footer-start'),
 		div_info,
 		a_info;
-	if(tinymce.majorVersion < 5) {
-		if(footer = parent.document.querySelector('.mce-foot > .mce-container-body > .mce-abs-end')) {
-			div_info = parent.document.createElement('div');
-			div_info.classList.add('mce-codemirror-info');
-			a_info = parent.document.createElement('a');
-			a_info.href = "https://github.com/ProjectSoft-STUDIONIONS/tinymce-codemirror-evolutioncms";
-			a_info.target = "_blank";
-			a_info.innerHTML = `TinyMCE Codemirror plugin`;
-			div_info.append(a_info);
-			footer.after(div_info);
-		}
-	} else {}
+
+	img.src = tinymce.baseURL + '/plugins/codemirror/codemirror.svg';
+	img.style = 'margin-right:10px;width:20px;height:20px;position:relative;';
+	title = tinymce.majorVersion < 5 ? parent.document.querySelector('.mce-title') : parent.document.querySelector('.tox-dialog__title');
+	if(title) {
+		title.prepend(img);
+	}
+	// Add information plugin
+	if(footer) {
+		div_info = parent.document.createElement('div');
+		div_info.classList.add('mce-codemirror-info');
+		a_info = parent.document.createElement('a');
+		a_info.href = "https://github.com/ProjectSoft-STUDIONIONS/tinymce-codemirror-evolutioncms";
+		a_info.target = "_blank";
+		a_info.innerHTML = `TinyMCE Codemirror plugin`;
+		div_info.append(a_info);
+		footer.prepend(div_info);
+	}
 	// Set CodeMirror cursor and bookmark to same position as cursor was in TinyMCE:
 	var html = editor.getContent({source_view: true});
 
@@ -275,12 +270,9 @@ function submit()
 		code.search(ccScript) !== -1 ||
 		code.search(ccStyle) !== -1 ||
 		code.search(ccLocationCheck) !== -1
-	)
-	{
+	) {
 		editor.setContent(code.replace(cc, ''));
-	}
-	else
-	{
+	} else {
 		editor.setContent(code.replace(cc, '<span id="CmCaReT"></span>'));
 	}
 
